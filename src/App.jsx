@@ -23,7 +23,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen text-7xl">
+    <div className="min-h-screen flex justify-center items-center bg-[#000000] bg-no-repeat bricolage text-white">
       {renderCurrentComponent()}
     </div>
   );
