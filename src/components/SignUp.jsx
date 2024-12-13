@@ -15,7 +15,7 @@ const SignUp = ({ onNext }) => {
                     RhinoSpider <img src={Logo} alt='RhinoSpider' className='h-8 sm:h-12' />
                 </p>
                 <p className='text-xs sm:text-base font-medium pt-2 sm:pt-3'>Get rewarded for your unused internet.</p>
-                <p className='flex items-center text-sm sm:text-base pt-3 sm:pt-5 gap-2 sm:gap-4'>Powered by: <img src={ICLogo} className='h-6 w-auto' alt="IC" /></p>
+                <p className='flex items-center text-sm sm:text-base pt-3 sm:pt-5 gap-2 sm:gap-4'>Powered by: <img src={ICLogo} className='h-3 sm:h-6 w-auto' alt="IC" /></p>
                 <motion.button
                     whileTap={{scale:0.9}} 
                     className='bg-white text-black text-sm sm:text-base p-2 sm:p-3 mt-2 sm:mt-5 rounded-full mx-auto w-full glow-button'

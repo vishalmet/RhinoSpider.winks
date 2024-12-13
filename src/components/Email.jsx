@@ -65,7 +65,7 @@ const Email = ({ onNext }) => {
             <div className="w-[220px] sm:w-[380px]">
                 <img 
                     src={Logo} 
-                    className='w-24 h-auto absolute top-0 right-0' 
+                    className='w-16 sm:w-24 h-auto absolute top-0 right-0' 
                     alt="RhinoSpider" 
                 />
                 <p className='text-base sm:text-3xl'>Email</p>
