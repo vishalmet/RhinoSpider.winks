@@ -11,7 +11,7 @@ const Confirmation = ({onNext}) => {
             <div className="w-[220px] sm:w-[380px]">
                 <img src={Logo} className=' w-16 sm:w-24 h-auto absolute top-0 right-0' alt="RhinoSpider" />
                 <p className='text-base sm:text-3xl'>Confirmation</p>
-                <p className=' font-normal py-3 '>Download Desktop Chrome Extension.</p>
+                <p className='text-sm sm:text-base font-normal py-3 '>Download Desktop Chrome Extension.</p>
                 <img src={ChromeStore} className=' h-10 sm:h-16 w-auto glow-button rounded-xl mx-auto' alt="ChromeStore" />
                 <motion.button
                     whileTap={{scale:0.9}} 
