@@ -24,7 +24,10 @@ const App = () => {
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-[#000000] bg-no-repeat bricolage text-white">
+      <div className="">
       {renderCurrentComponent()}
+      <p className=' font-medium text-center pt-1'>Powered by winks.fun</p>
+      </div>
     </div>
   );
 };
