@@ -15,7 +15,8 @@ const Email = ({ onNext }) => {
                     <img src={Mail} className=' w-8 h-auto' alt="Mail" />
                     <input
                         type="email"
-                        className='text-xl bg-transparent outline-none w-full'
+                        placeholder='Email'
+                        className='text-xl bg-transparent outline-none w-full font-medium'
                     />
                 </div>
                 <button
