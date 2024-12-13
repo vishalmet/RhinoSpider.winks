@@ -6,11 +6,11 @@ import Footer from './Footer';
 
 const Email = ({ onNext }) => {
     return (
-        <div className='bg-custom-bg2 bg-cover bg-center h-fit flex justify-center items-center w-fit p-4 sm:p-10 rounded font-semibold relative'>
-            <div className=" max-w-[280px] sm:max-w-[450px] ">
+        <div className='bg-custom-bg2 bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold relative'>
+            <div className="w-[200px] sm:w-[380px]">
                 <img src={Logo} className=' w-24 h-auto absolute top-0 right-0' alt="RhinoSpider" />
                 <p className='text-base sm:text-3xl'>Email</p>
-                <p className=' font-normal py-3'>Please make sure your email address is correct so we can get in touch with you.</p>
+                <p className=' font-normal py-3 '>Please make sure your email address is correct so we can get in touch with you.</p>
                 <div className=' border-2 border-white rounded-[20px] p-3 flex items-center gap-2 glow-container'>
                     <img src={Mail} className=' w-8 h-auto' alt="Mail" />
                     <input

@@ -7,8 +7,8 @@ import PlayStore from "../assets/Icons/PlayStore.png"
 
 const SignUp = ({ onNext }) => {
     return (
-        <div className='bg-custom-bg bg-cover bg-center h-fit flex justify-center items-center w-fit p-4 sm:p-10 rounded font-semibold'>
-            <div className=" max-w-[280px] sm:max-w-[450px]">
+        <div className='bg-custom-bg bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold'>
+            <div className="w-[200px] sm:w-[380px]">
                 <p className='text-base sm:text-3xl'>Introducing</p>
                 <p className='text-xl sm:text-4xl flex items-center gap-2 glow-text'>
                     RhinoSpider <img src={Logo} alt='RhinoSpider' className='h-8 sm:h-12' />
