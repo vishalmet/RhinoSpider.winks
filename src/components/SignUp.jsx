@@ -7,10 +7,10 @@ import PlayStore from "../assets/Icons/PlayStore.png"
 
 const SignUp = ({ onNext }) => {
     return (
-        <div className='bg-custom-bg bg-cover bg-center min-h-screen flex justify-center items-center w-screen p-6 rounded font-semibold'>
+        <div className='bg-custom-bg bg-cover bg-center h-fit flex justify-center items-center w-fit p-6 rounded font-semibold'>
             <div className=" max-w-[300px] sm:max-w-[450px]">
                 <p className='text-3xl'>Introducing</p>
-                <p className='text-3xl flex items-center gap-4 glow-text'>
+                <p className='text-4xl flex items-center gap-4 glow-text'>
                     RhinoSpider <img src={Logo} className='h-12' />
                 </p>
                 <p className='font-medium pt-3'>Get rewarded for your unused internet.</p>
@@ -21,7 +21,7 @@ const SignUp = ({ onNext }) => {
                 >
                     SIGN UP - JUST 3 CLICKS!
                 </button>
-                <div className="max-w-[300px] sm:max-w-[400px] flex items-center justify-between pt-5">
+                <div className="max-w-[300px] sm:max-w-[450px] flex items-center justify-between pt-5">
                     <img src={ChromeStore} className='h-8 w-auto glow-button rounded' alt="" />
                     <div className="flex items-center gap-2 font-normal">
                         <img src={AppStore} className='w-6 h-auto' alt="" />
