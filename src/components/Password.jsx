@@ -90,14 +90,14 @@ const Password = ({ onNext }) => {
             <div className="w-[220px] sm:w-[380px]">
                 <img src={Logo} className='w-24 h-auto absolute top-0 right-0' alt="RhinoSpider" />
                 <p className='text-base sm:text-3xl'>Password</p>
-                <div className='border-2 border-white rounded-[20px] p-2 sm:p-3 flex items-center gap-2 glow-container font-medium mt-3'>
+                <div className='border-2 border-white rounded-[20px] p-2 sm:p-3 flex items-center gap-2 glow-container font-medium mt-1 sm:mt-3'>
                     <img src={PasswordIcon} className='w-5 h-auto' alt="Password" />
                     <input
                         type="password"
                         placeholder='Create New Password'
                         value={password}
                         onChange={handlePasswordChange}
-                        className='text-base sm:text-xl bg-transparent outline-none w-full'
+                        className='text-sm sm:text-xl bg-transparent outline-none w-full'
                     />
                 </div>
                 <div className='border-2 border-white rounded-[20px] p-2 sm:p-3 flex items-center gap-2 glow-container font-medium mt-3'>
@@ -107,7 +107,7 @@ const Password = ({ onNext }) => {
                         placeholder='Confirm Password'
                         value={confirmPassword}
                         onChange={handleConfirmPasswordChange}
-                        className='text-base sm:text-xl bg-transparent outline-none w-full'
+                        className='text-sm sm:text-xl bg-transparent outline-none w-full'
                     />
                 </div>
                 {error && (

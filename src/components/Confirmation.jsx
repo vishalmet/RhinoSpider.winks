@@ -7,7 +7,7 @@ import ChromeStore from "../assets/Icons/ChromeStore.png"
 
 const Confirmation = ({onNext}) => {
     return (
-        <div className='bg-custom-bg2 bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold relative'>
+        <div className='bg-custom-bg4 bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold relative'>
             <div className="w-[220px] sm:w-[380px]">
                 <img src={Logo} className=' w-24 h-auto absolute top-0 right-0' alt="RhinoSpider" />
                 <p className='text-base sm:text-3xl'>Confirmation</p>

@@ -65,11 +65,11 @@ const Email = ({ onNext }) => {
             <div className="w-[220px] sm:w-[380px]">
                 <img 
                     src={Logo} 
-                    className='w-16 sm:w-24 h-auto absolute top-0 right-0' 
+                    className='w-24 h-auto absolute top-0 right-0' 
                     alt="RhinoSpider" 
                 />
                 <p className='text-base sm:text-3xl'>Email</p>
-                <p className='text-xs sm:text-base font-normal py-3'>
+                <p className='text-xs sm:text-base font-normal py-1 sm:py-3'>
                     Please make sure your email address is correct so we can get in touch with you.
                 </p>
                 <div className='border-2 border-white rounded-[20px] p-2 sm:p-3 flex items-center gap-2 glow-container'>
@@ -79,7 +79,7 @@ const Email = ({ onNext }) => {
                         placeholder='Email'
                         value={email}
                         onChange={handleEmailChange}
-                        className='text-base sm:text-xl bg-transparent outline-none w-full font-normal'
+                        className='text-sm sm:text-xl bg-transparent outline-none w-full font-normal'
                     />
                 </div>
                 {error && (
