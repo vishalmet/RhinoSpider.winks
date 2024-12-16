@@ -24,7 +24,7 @@ const Confirmation = ({onNext}) => {
 
     return (
         <div className='bg-custom-bg4 bg-cover bg-center h-screen w-screen flex justify-center items-center p-4 sm:p-10 rounded font-semibold '>
-            <div className="w-[220px] sm:w-[380px] relative">
+            <div className="w-[220px] sm:w-[400px] relative">
                 <img src={Logo} className='w-16 sm:w-24 h-auto absolute top-[-20px] right-0' alt="RhinoSpider" />
                 <p className='text-base sm:text-3xl'>Confirmation</p>
                 <p className='text-sm sm:text-base font-normal py-3'>Download Desktop Chrome Extension.</p>

@@ -26,7 +26,7 @@ const SignUp = ({ onNext }) => {
 
     return (
         <div className='bg-custom-bg bg-cover bg-center h-screen w-screen flex justify-center items-center p-4 sm:p-10 rounded font-semibold'>
-            <div className="w-[220px] sm:w-[380px] mx-auto">
+            <div className="w-[220px] sm:w-[400px] mx-auto">
                 <p className='text-base sm:text-4xl'>Introducing</p>
                 <p className='text-xl sm:text-5xl flex items-center gap-2 glow-text'>
                     RhinoSpider <img src={Logo} alt='RhinoSpider' className='h-8 sm:h-12' />

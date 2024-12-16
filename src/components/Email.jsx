@@ -81,7 +81,7 @@ const Email = ({ onNext }) => {
 
     return (
         <div className='bg-custom-bg2 bg-cover bg-center h-screen w-screen flex justify-center items-center p-4 sm:p-10 rounded font-semibold '>
-            <div className="w-[220px] sm:w-[380px] relative">
+            <div className="w-[220px] sm:w-[400px] relative">
                 <img
                     src={Logo}
                     className='w-16 sm:w-24 h-auto absolute top-[-20px] right-0'
