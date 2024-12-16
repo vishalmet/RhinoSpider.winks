@@ -117,9 +117,9 @@ const Password = ({ onNext }) => {
     }, [password, confirmPassword, isLoading]); // Dependencies include both password states and loading state
 
     return (
-        <div className='bg-custom-bg3 bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold relative'>
-            <div className="w-[220px] sm:w-[380px]">
-                <img src={Logo} className='w-16 sm:w-24 h-auto absolute top-0 right-0' alt="RhinoSpider" />
+        <div className='bg-custom-bg3 bg-cover bg-center h-screen w-screen flex justify-center items-center p-4 sm:p-10 rounded font-semibold '>
+            <div className="w-[220px] sm:w-[380px] relative">
+                <img src={Logo} className='w-16 sm:w-24 h-auto absolute top-[-20px] right-0' alt="RhinoSpider" />
                 <p className='text-base sm:text-3xl'>Password</p>
                 <div className='border-2 border-white rounded-[20px] p-2 sm:p-3 flex items-center gap-2 glow-container font-medium mt-1 sm:mt-3'>
                     <img src={PasswordIcon} className='w-5 h-auto' alt="Password" />
@@ -157,6 +157,7 @@ const Password = ({ onNext }) => {
                     {isLoading ? 'Creating Account...' : 'Next'}
                 </motion.button>
                 <Footer />
+                <p className='font-medium text-center pt-1 sm:pt-5'>Powered by winks.fun</p>
             </div>
         </div>
     );

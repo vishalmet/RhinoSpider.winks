@@ -80,12 +80,12 @@ const Email = ({ onNext }) => {
     }, [email, isLoading]); // Dependencies array includes email and isLoading
 
     return (
-        <div className='bg-custom-bg2 bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold relative'>
-            <div className="w-[220px] sm:w-[380px]">
-                <img 
-                    src={Logo} 
-                    className='w-16 sm:w-24 h-auto absolute top-0 right-0' 
-                    alt="RhinoSpider" 
+        <div className='bg-custom-bg2 bg-cover bg-center h-screen w-screen flex justify-center items-center p-4 sm:p-10 rounded font-semibold '>
+            <div className="w-[220px] sm:w-[380px] relative">
+                <img
+                    src={Logo}
+                    className='w-16 sm:w-24 h-auto absolute top-[-20px] right-0'
+                    alt="RhinoSpider"
                 />
                 <p className='text-base sm:text-3xl'>Email</p>
                 <p className='text-xs sm:text-base font-normal py-1 sm:py-3'>
@@ -108,15 +108,15 @@ const Email = ({ onNext }) => {
                 )}
                 <motion.button
                     whileTap={{ scale: 0.9 }}
-                    className={`bg-white text-black text-sm sm:text-base p-2 sm:p-3 mt-2 sm:mt-5 rounded-full mx-auto w-full glow-button ${
-                        isLoading ? 'opacity-70 cursor-not-allowed' : ''
-                    }`}
+                    className={`bg-white text-black text-sm sm:text-base p-2 sm:p-3 mt-2 sm:mt-5 rounded-full mx-auto w-full glow-button ${isLoading ? 'opacity-70 cursor-not-allowed' : ''
+                        }`}
                     onClick={handleSubmit}
                     disabled={isLoading}
                 >
                     {isLoading ? 'Validating...' : 'Next'}
                 </motion.button>
                 <Footer />
+                <p className='font-medium text-center pt-1 sm:pt-5'>Powered by winks.fun</p>
             </div>
         </div>
     );

@@ -17,7 +17,7 @@ const SignUp = ({ onNext }) => {
     // Add event listener when component mounts
     React.useEffect(() => {
         document.addEventListener('keypress', handleKeyPress);
-        
+
         // Cleanup listener when component unmounts
         return () => {
             document.removeEventListener('keypress', handleKeyPress);
@@ -25,16 +25,16 @@ const SignUp = ({ onNext }) => {
     }, [onNext]);
 
     return (
-        <div className='bg-custom-bg bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold'>
-            <div className="w-[220px] sm:w-[380px]">
-                <p className='text-base sm:text-3xl'>Introducing</p>
-                <p className='text-xl sm:text-4xl flex items-center gap-2 glow-text'>
+        <div className='bg-custom-bg bg-cover bg-center h-screen w-screen flex justify-center items-center p-4 sm:p-10 rounded font-semibold'>
+            <div className="w-[220px] sm:w-[380px] mx-auto">
+                <p className='text-base sm:text-4xl'>Introducing</p>
+                <p className='text-xl sm:text-5xl flex items-center gap-2 glow-text'>
                     RhinoSpider <img src={Logo} alt='RhinoSpider' className='h-8 sm:h-12' />
                 </p>
                 <p className='text-xs sm:text-base font-medium pt-2 sm:pt-3'>Get rewarded for your unused internet.</p>
                 <p className='flex items-center text-sm sm:text-base pt-3 sm:pt-5 gap-2 sm:gap-4'>Powered by: <img src={ICLogo} className='h-3 sm:h-6 w-auto' alt="IC" /></p>
                 <motion.button
-                    whileTap={{scale:0.9}} 
+                    whileTap={{ scale: 0.9 }}
                     className='bg-white text-black text-sm sm:text-base p-2 sm:p-3 mt-2 sm:mt-5 rounded-full mx-auto w-full glow-button'
                     onClick={onNext}
                 >
@@ -48,6 +48,7 @@ const SignUp = ({ onNext }) => {
                         Coming Soon
                     </div>
                 </div>
+            <p className='font-medium text-center pt-1 sm:pt-5'>Powered by winks.fun</p>
             </div>
         </div>
     );
