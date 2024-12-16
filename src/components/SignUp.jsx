@@ -7,6 +7,23 @@ import AppStore from "../assets/Icons/AppStore.png"
 import PlayStore from "../assets/Icons/PlayStore.png"
 
 const SignUp = ({ onNext }) => {
+    // Handle keyboard events
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            onNext();
+        }
+    };
+
+    // Add event listener when component mounts
+    React.useEffect(() => {
+        document.addEventListener('keypress', handleKeyPress);
+        
+        // Cleanup listener when component unmounts
+        return () => {
+            document.removeEventListener('keypress', handleKeyPress);
+        };
+    }, [onNext]);
+
     return (
         <div className='bg-custom-bg bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold'>
             <div className="w-[220px] sm:w-[380px]">
@@ -36,4 +53,4 @@ const SignUp = ({ onNext }) => {
     );
 };
 
-export default SignUp
+export default SignUp;

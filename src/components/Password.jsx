@@ -42,7 +42,7 @@ const Password = ({ onNext }) => {
     
         setIsLoading(true);
         try {
-            console.log('Attempting signup with:', { email, password }); // Debug log
+            console.log('Attempting signup with:', { email, password });
     
             const response = await axios.post('https://rhinospiderapi.vercel.app/api/auth/signup', {
                 email,
@@ -74,7 +74,6 @@ const Password = ({ onNext }) => {
         }
     };
 
-    // Clear error when user starts typing
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
         if (error) setError('');
@@ -84,6 +83,38 @@ const Password = ({ onNext }) => {
         setConfirmPassword(e.target.value);
         if (error) setError('');
     };
+
+    // Handle enter key press
+    const handleKeyPress = async (e) => {
+        if (e.key === 'Enter' && !isLoading) {
+            // If on password field, move to confirm password
+            if (document.activeElement === document.querySelector('input[placeholder="Create New Password"]')) {
+                document.querySelector('input[placeholder="Confirm Password"]').focus();
+            } 
+            // If on confirm password field, submit
+            else if (document.activeElement === document.querySelector('input[placeholder="Confirm Password"]')) {
+                await handleSignup();
+            }
+        }
+    };
+
+    // Add event listeners for both input fields
+    useEffect(() => {
+        const passwordInput = document.querySelector('input[placeholder="Create New Password"]');
+        const confirmInput = document.querySelector('input[placeholder="Confirm Password"]');
+
+        if (passwordInput && confirmInput) {
+            passwordInput.addEventListener('keypress', handleKeyPress);
+            confirmInput.addEventListener('keypress', handleKeyPress);
+        }
+
+        return () => {
+            if (passwordInput && confirmInput) {
+                passwordInput.removeEventListener('keypress', handleKeyPress);
+                confirmInput.removeEventListener('keypress', handleKeyPress);
+            }
+        };
+    }, [password, confirmPassword, isLoading]); // Dependencies include both password states and loading state
 
     return (
         <div className='bg-custom-bg3 bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold relative'>

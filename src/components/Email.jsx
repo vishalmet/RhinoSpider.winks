@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Logo from "../assets/Icons/logo.png";
 import Mail from "../assets/Icons/mail.png";
@@ -44,7 +44,6 @@ const Email = ({ onNext }) => {
         try {
             await validateEmail(email);
             setError('');
-            // Store email in sessionStorage after successful validation
             sessionStorage.setItem('userEmail', email);
             onNext();
         } catch (error) {
@@ -54,11 +53,31 @@ const Email = ({ onNext }) => {
         }
     };
 
-    // Clear error when user starts typing
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
         if (error) setError('');
     };
+
+    // Handle enter key press
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter' && !isLoading) {
+            handleSubmit();
+        }
+    };
+
+    // Add event listener for input field
+    useEffect(() => {
+        const inputElement = document.querySelector('input[type="email"]');
+        if (inputElement) {
+            inputElement.addEventListener('keypress', handleKeyPress);
+        }
+
+        return () => {
+            if (inputElement) {
+                inputElement.removeEventListener('keypress', handleKeyPress);
+            }
+        };
+    }, [email, isLoading]); // Dependencies array includes email and isLoading
 
     return (
         <div className='bg-custom-bg2 bg-cover bg-center h-fit w-fit p-4 sm:p-10 rounded font-semibold relative'>
@@ -76,7 +95,7 @@ const Email = ({ onNext }) => {
                     <img src={Mail} className='w-8 h-auto' alt="Mail" />
                     <input
                         type="email"
-                        placeholder='Email'
+                        placeholder='johndoe@gmail.com'
                         value={email}
                         onChange={handleEmailChange}
                         className='text-sm sm:text-xl bg-transparent outline-none w-full font-normal'
